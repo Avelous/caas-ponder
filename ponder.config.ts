@@ -32,7 +32,7 @@ const chainsWithApiKey = Object.fromEntries(
 export default createConfig({
   database: {
     kind: "postgres",
-    connectionString: process.env.DATABASE_URL,
+    connectionString: process.env.DATABASE_URL || "caas_schema",
   },
   networks: chainsWithApiKey,
   contracts: {
